@@ -41,7 +41,7 @@ val orxFeatures = setOf(
 //  "orx-obj-loader",
     "orx-olive",
 //  "orx-osc",
-//  "orx-palette",
+    "orx-palette",
     "orx-panel",
 //  "orx-parameters",
 //  "orx-poisson-fill",
@@ -60,6 +60,9 @@ val orxFeatures = setOf(
 //  "orx-video-profiles",
     null
 ).filterNotNull()
+
+
+val gdxVersion = "1.9.8"
 
 /** ## additional ORML features to be added to this project */
 val ormlFeatures = setOf<String>(
@@ -99,6 +102,13 @@ repositories {
 }
 
 dependencies {
+
+
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.2.0") //for JVM platform
+    implementation("com.badlogicgames.gdx:gdx:$gdxVersion")
+    implementation("com.badlogicgames.gdx:gdx-box2d:$gdxVersion")
+    implementation("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
+    implementation("com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop")
 
 //    implementation(libs.jsoup)
 //    implementation(libs.gson)
